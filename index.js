@@ -3,9 +3,16 @@ const app = express();
 let path = require('path');
 let ejs = require('ejs');
 let bodyParser = require('body-parser');
+let cookieParser = require('cookie-parser');
 let session = require('express-session');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookieParser('scm'));
+app.use(session({
+	resave:true,
+	saveUninitalized:false,
+	secret:'scm'
+}));
 app.use(express.static(path.join(__dirname,'public')));
 app.engine('html',ejs.__express);
 app.set('view engine','html');
@@ -19,3 +26,4 @@ app.all('*',(req,res,next) =>{
 var apiRoute = require('./controllers/routes.js');
 app.use('/',apiRoute);
 app.listen('8080');
+

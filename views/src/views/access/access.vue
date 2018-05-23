@@ -73,7 +73,7 @@ export default {
             this.$store.commit('updateMenulist');
         },
         test(){
-            axios.post('/api/auth/login',qs.stringify({'userId':1,'userName':'chengjie'})).then( res =>{
+            axios.post('/api/',qs.stringify({'userId':1,'userName':'chengjie'})).then( res =>{
                 console.log(res);
             })
         }

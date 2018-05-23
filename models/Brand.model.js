@@ -6,10 +6,10 @@
  */
 module.exports = sequelize => {
 	return sequelize.define('Brand',{},{
-		'tablename':'erp_brand',
-		'createAt':'create_time',
-		'updateAt':'update_time',
-		'deleteAt':'delete_time',
-		'paranoid':true
+		tableName:'erp_brand',
+		createdAt:'create_time',
+		updatedAt:'update_time',
+		deletedAt:'delete_time',
+		paranoid:true
 	});
 }

@@ -6,8 +6,8 @@
  */
 module.exports = sequelize => {
 	return sequelize.define('Message',{},{
-		'tablename':'erp_msg',
-		'createAt':'create_time',
-		'updateAt':'update_time',
+		tableName:'erp_msg',
+		createdAt:'create_time',
+		updatedAt:'update_time',
 	});
 }

@@ -34,6 +34,7 @@
                 </div>
             </Card>
         </div>
+
     </div>
 </template>
 
@@ -45,7 +46,7 @@ export default {
     data () {
         return {
             form: {
-                userName: 'iview_admin',
+                userName: '',
                 password: ''
             },
             rules: {
@@ -65,22 +66,31 @@ export default {
                     userName:this.form.userName,
                     pwd:this.form.password
                 };
-                return axios.post('/api/auth/login',qs.stringify(data))
-                        .then( res => {
-                            console.log(res);
-                        })
+                // return axios.post('/api/auth/login',qs.stringify(data))
+                //         .then( res => {
+                //             if(res.data.code != 1){
+                //                 this.$Message.error(res.data.info)
+                //             }else{
+                //                 Cookies.set('user', this.form.userName);
+                //                 this.$store.commit('setAvator',res.data.data.head_ico);
+                //                 this.$Message.success(res.data.info);
+                //                 this.$router.push({
+                //                     name: 'home_index'
+                //                 });
+                //             }
+                //         });
                 if (valid) {
-                    Cookies.set('user', this.form.userName);
-                    Cookies.set('password', this.form.password);
-                    this.$store.commit('setAvator', 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3448484253,3685836170&fm=27&gp=0.jpg');
-                    if (this.form.userName === 'iview_admin') {
-                        Cookies.set('access', 0);
-                    } else {
-                        Cookies.set('access', 1);
-                    }
-                    this.$router.push({
-                        name: 'home_index'
-                    });
+                   Cookies.set('user', this.form.userName);
+                   Cookies.set('password', this.form.password);
+                   this.$store.commit('setAvator', 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3448484253,3685836170&fm=27&gp=0.jpg');
+                   if (this.form.userName === 'iview_admin') {
+                       Cookies.set('access', 0);
+                   } else {
+                       Cookies.set('access', 1);
+                   }
+                   this.$router.push({
+                       name: 'home_index'
+                   });
                 }
             });
         }

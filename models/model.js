@@ -9,7 +9,7 @@ const Goods = sequelize.import('./Goods.model.js');
 const Product = sequelize.import('./Product.model.js');
 const ProductAgent = sequelize.import('./ProductAgent.model.js');
 
-
+//模型关联
 module.exports = {
 	'User' : User,
 	'UserInfo' : UserInfo

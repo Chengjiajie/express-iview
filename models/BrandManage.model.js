@@ -6,8 +6,8 @@
  */
 module.exports = sequelize => {
 	return sequelize.define('BrandManage',{},{
-		'tablename':'erp_brand_manage',
-		'createAt':'create_time',
-		'updateAt':'update_time',
+		tableName:'erp_brand_manage',
+		createdAt:'create_time',
+		updatedAt:'update_time',
 	});
 }

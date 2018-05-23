@@ -6,10 +6,10 @@
  */
 module.exports = sequelize => {
 	return sequelize.define('ProductAgent',{},{
-		'tablename':'erp_product_agent',
-		'createAt':'create_time',
-		'updateAt':'update_time',
-		'deleteAt':'delete_time',
-		'paranoid':true
+		tableName:'erp_product_agent',
+		createdAt:'create_time',
+		updatedAt:'update_time',
+		deletedAt:'delete_time',
+		paranoid:true
 	});
 }

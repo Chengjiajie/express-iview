@@ -7,18 +7,11 @@
  */
 module.exports = (sequelize,DataTypes) =>{
 	return sequelize.define('UserInfo',{
-		userId:{
-			type:DataTypes.BIGINT(11),
-			field:'user_id',
-			references:{
-				model:'User',
-				key:'id'
-			}
-		}
+		
 	},{
-		'tablename':'erp_user_info',
-		'createAt':false,
-		'updateAt':false,
-		'deleteAt':false
+		tableName:'erp_user_info',
+		createdAt:false,
+		updatedAt:false,
+		deletedAt:false,
 	});
 }

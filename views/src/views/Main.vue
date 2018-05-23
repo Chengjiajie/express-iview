@@ -78,6 +78,7 @@
     import Cookies from 'js-cookie';
     import util from '@/libs/util.js';
     import scrollBar from '@/views/my-components/scroll-bar/vue-scroller-bars';
+    import axios from 'axios'
     
     export default {
         components: {
@@ -148,11 +149,19 @@
                     });
                 } else if (name === 'loginout') {
                     // 退出登录
-                    this.$store.commit('logout', this);
-                    this.$store.commit('clearOpenedSubmenu');
-                    this.$router.push({
-                        name: 'login'
-                    });
+                    axios.post('/api/auth/loginOut').then(res=>{
+                        this.$Message.success(res.data.info)
+                        this.$store.commit('logout', this);
+                        this.$store.commit('clearOpenedSubmenu');
+                        this.$router.push({
+                           name: 'login'
+                        });
+                    })
+                    //this.$store.commit('logout', this);
+                    //this.$store.commit('clearOpenedSubmenu');
+                    //this.$router.push({
+                    //    name: 'login'
+                    //});
                 }
             },
             checkTag (name) {

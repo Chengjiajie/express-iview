@@ -310,107 +310,108 @@ export const appRouter = [
                 name: 'customer_list',
                 component: () => import('@/views/customer/index.vue')
             },
+
         ]
     },
-    // {
-    //     path: '/account',
-    //     icon: 'person-stalker',
-    //     title: '账户管理',
-    //     name: 'account',
-    //     component: Main,
-    //     children: [
-    //         { 
-    //             path: 'index',
-    //             title: '账户设置',
-    //             name: 'account_list',
-    //             component: () => import('@/views/account/index.vue')
-    //         },
-    //         { 
-    //             path: 'withdrawals',
-    //             title: '余额管理',
-    //             name: 'withdrawals_list',
-    //             component: () => import('@/views/account/withdrawals.vue')
-    //         },
-    //         { 
-    //             path: 'bills',
-    //             title: '供应商账单',
-    //             name: 'bills_list',
-    //             component: () => import('@/views/account/bills.vue')
-    //         },
-    //     ]
-    // },
-    // {
-    //     path: '/user',
-    //     icon: 'android-person',
-    //     title: '用户中心',
-    //     name: 'user',
-    //     component: Main,
-    //     children: [
-    //         { 
-    //             path: 'index',
-    //             title: '客户列表',
-    //             name: 'user_list',
-    //             component: () => import('@/views/user/index.vue')
-    //         },
-    //     ]
-    // },
-    // {
-    //     path: '/single',
-    //     icon: 'android-archive',
-    //     title: '营销活动',
-    //     name: 'single',
-    //     component: Main,
-    //     children: [
-    //         { 
-    //             path: 'index',
-    //             title: '单品营销活动',
-    //             name: 'single_list',
-    //             component: () => import('@/views/single/index.vue')
-    //         },
-    //         { 
-    //             path: 'orderdiscount',
-    //             title: '订单营销活动',
-    //             name: 'orderdiscount_list',
-    //             component: () => import('@/views/single/orderdiscount.vue')
-    //         },
-    //     ]
-    // },
-    // {
-    //     path: '/express',
-    //     icon: 'social-yen',
-    //     title: '运费设置',
-    //     name: 'express',
-    //     component: Main,
-    //     children: [
-    //         { 
-    //             path: 'index',
-    //             title: '运费设置',
-    //             name: 'express_list',
-    //             component: () => import('@/views/express/index.vue')
-    //         },
-    //         { 
-    //             path: 'expressfree',
-    //             title: '免邮模板设置',
-    //             name: 'expressfree_list',
-    //             component: () => import('@/views/express/expressfree.vue')
-    //         },
-    //     ]
-    // },
-    // {
-    //     path: '/coupon',
-    //     icon: 'android-list',
-    //     title: '代金券管理',
-    //     name: 'coupon',
-    //     component: Main,
-    //     children: [
-    //         { 
-    //             path: 'index',
-    //             title: '代金券列表',
-    //             name: 'coupon_list',
-    //             component: () => import('@/views/coupon/index.vue')
-    //         },
-    //     ]
-    // },
+    {
+        path: '/account',
+        icon: 'person-stalker',
+        title: '账户管理',
+        name: 'account',
+        component: Main,
+        children: [
+            { 
+                path: 'index',
+                title: '账户设置',
+                name: 'account_list',
+                component: () => import('@/views/account/index.vue')
+            },
+            { 
+                path: 'withdrawals',
+                title: '余额管理',
+                name: 'withdrawals_list',
+                component: () => import('@/views/account/withdrawals.vue')
+            },
+            { 
+                path: 'bills',
+                title: '供应商账单',
+                name: 'bills_list',
+                component: () => import('@/views/account/bills.vue')
+            },
+        ]
+    },
+    {
+        path: '/user',
+        icon: 'android-person',
+        title: '用户中心',
+        name: 'user',
+        component: Main,
+        children: [
+            { 
+                path: 'index',
+                title: '个人资料',
+                name: 'user_list',
+                component: () => import('@/views/user/index.vue')
+            },
+        ]
+    },
+    {
+        path: '/single',
+        icon: 'android-archive',
+        title: '营销活动',
+        name: 'single',
+        component: Main,
+        children: [
+            { 
+                path: 'index',
+                title: '单品营销活动',
+                name: 'single_list',
+                component: () => import('@/views/single/index.vue')
+            },
+            { 
+                path: 'orderdiscount',
+                title: '订单营销活动',
+                name: 'orderdiscount_list',
+                component: () => import('@/views/single/orderdiscount.vue')
+            },
+        ]
+    },
+    {
+        path: '/express',
+        icon: 'social-yen',
+        title: '运费设置',
+        name: 'express',
+        component: Main,
+        children: [
+            { 
+                path: 'index',
+                title: '运费设置',
+                name: 'express_list',
+                component: () => import('@/views/express/index.vue')
+            },
+            { 
+                path: 'expressfree',
+                title: '免邮模板设置',
+                name: 'expressfree_list',
+                component: () => import('@/views/express/expressfree.vue')
+            },
+        ]
+    },
+    {
+        path: '/coupon',
+        icon: 'android-list',
+        title: '代金券管理',
+        name: 'coupon',
+        component: Main,
+        children: [
+            { 
+                path: 'index',
+                title: '代金券列表',
+                name: 'coupon_list',
+                component: () => import('@/views/coupon/index.vue')
+            },
+        ]
+    },
 ];
 
 // 所有上面定义的路由都要写在下面的routers里

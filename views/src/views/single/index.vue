@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Row style="margin:20px 0;">
-			<Button type="info">新增单品促销方案</Button>
+			<Button type="info" @click='discountAdd'>新增单品促销方案</Button>
 		</Row>
     	<Table border :columns="columns" :data="data"></Table>
     </div>
@@ -93,13 +93,18 @@
         },
         methods: {
             show (index) {
-                this.$Modal.info({
-                    title: 'User Info',
-                    content: `Name：${this.data6[index].name}<br>Age：${this.data6[index].age}<br>Address：${this.data6[index].address}`
+                this.$router.push({
+                    name:'discount_detail',
+                    params:{id:index}
                 })
             },
             remove (index) {
                 this.data6.splice(index, 1);
+            },
+            discountAdd(){
+                this.$router.push({
+                    name:'discount_add',
+                })
             }
         }
     };

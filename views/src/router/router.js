@@ -68,6 +68,8 @@ export const otherRouter = {
         { path: 'refund/detail/:id', title: '退款详情', name: 'refund_detail', component: () => import('@/views/order/refund_detail.vue') },
         { path: 'account/add', title: '添加账户', name: 'account_add', component: () => import('@/views/account/account_detail.vue') },
         { path: 'account/detail/:id', title: '账户详情', name: 'account_detail', component: () => import('@/views/account/account_detail.vue') },
+        { path: 'single/detail/:id', title: '单品营销详情', name: 'discount_detail', component: () => import('@/views/single/discount_detail.vue') },
+        { path: 'single/add', title: '单品营销添加', name: 'discount_add', component: () => import('@/views/single/discount_detail.vue') },
     ]
 };
 

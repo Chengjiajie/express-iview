@@ -63,6 +63,11 @@ export const otherRouter = {
         { path: 'message', title: '消息中心', name: 'message_index', component: () => import('@/views/message/message.vue') },
         { path: 'order/detail/:order_id', title: '订单详情', name: 'order_detail', component: () => import('@/views/order/detail.vue') },
         { path: 'brand/detail/:brand_id', title: '品牌详情', name: 'brand-detail', component: () => import('@/views/goods/brand-detail.vue') },
+        { path: 'address/detail/:id', title: '地址详情', name: 'address_detail', component: () => import('@/views/order/address_detail.vue') },
+        { path: 'goods/detail/:id', title: '商品详情', name: 'goods_detail', component: () => import('@/views/goods/goods_detail.vue') },
+        { path: 'refund/detail/:id', title: '退款详情', name: 'refund_detail', component: () => import('@/views/order/refund_detail.vue') },
+        { path: 'account/add', title: '添加账户', name: 'account_add', component: () => import('@/views/account/account_detail.vue') },
+        { path: 'account/detail/:id', title: '账户详情', name: 'account_detail', component: () => import('@/views/account/account_detail.vue') },
     ]
 };
 
@@ -99,27 +104,27 @@ export const appRouter = [
     //         { path: 'index', title: {i18n: 'international'}, name: 'international_index', component: () => import('@/views/international/international.vue') }
     //     ]
     // },
-    // {
-    //     path: '/component',
-    //     icon: 'social-buffer',
-    //     name: 'component',
-    //     title: '组件',
-    //     component: Main,
-    //     children: [
-    //         {
-    //             path: 'text-editor',
-    //             icon: 'compose',
-    //             name: 'text-editor',
-    //             title: '富文本编辑器',
-    //             component: () => import('@/views/my-components/text-editor/text-editor.vue')
-    //         },
-    //         {
-    //             path: 'md-editor',
-    //             icon: 'pound',
-    //             name: 'md-editor',
-    //             title: 'Markdown编辑器',
-    //             component: () => import('@/views/my-components/markdown-editor/markdown-editor.vue')
-    //         },
+    {
+        path: '/component',
+        icon: 'social-buffer',
+        name: 'component',
+        title: '组件',
+        component: Main,
+        children: [
+            {
+                path: 'text-editor',
+                icon: 'compose',
+                name: 'text-editor',
+                title: '富文本编辑器',
+                component: () => import('@/views/my-components/text-editor/text-editor.vue')
+            },
+            {
+                path: 'md-editor',
+                icon: 'pound',
+                name: 'md-editor',
+                title: 'Markdown编辑器',
+                component: () => import('@/views/my-components/markdown-editor/markdown-editor.vue')
+            },
     //         {
     //             path: 'image-editor',
     //             icon: 'crop',
@@ -134,20 +139,20 @@ export const appRouter = [
     //             title: '可拖拽列表',
     //             component: () => import('@/views/my-components/draggable-list/draggable-list.vue')
     //         },
-    //         {
-    //             path: 'area-linkage',
-    //             icon: 'ios-more',
-    //             name: 'area-linkage',
-    //             title: '城市级联',
-    //             component: () => import('@/views/my-components/area-linkage/area-linkage.vue')
-    //         },
-    //         {
-    //             path: 'file-upload',
-    //             icon: 'android-upload',
-    //             name: 'file-upload',
-    //             title: '文件上传',
-    //             component: () => import('@/views/my-components/file-upload/file-upload.vue')
-    //         },
+            {
+                path: 'area-linkage',
+                icon: 'ios-more',
+                name: 'area-linkage',
+                title: '城市级联',
+                component: () => import('@/views/my-components/area-linkage/area-linkage.vue')
+            },
+            {
+                path: 'file-upload',
+                icon: 'android-upload',
+                name: 'file-upload',
+                title: '文件上传',
+                component: () => import('@/views/my-components/file-upload/file-upload.vue')
+            },
     //         {
     //             path: 'scroll-bar',
     //             icon: 'android-upload',
@@ -170,8 +175,8 @@ export const appRouter = [
     //             title: 'split-pane',
     //             component: () => import('@/views/my-components/split-pane/split-pane-page.vue')
     //         }
-    //     ]
-    // },
+        ]
+    },
     // {
     //     path: '/form',
     //     icon: 'android-checkbox',

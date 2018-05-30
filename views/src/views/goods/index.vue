@@ -51,8 +51,8 @@
             },
             showDetail(id){
                 this.$router.push({
-                       name: 'order_detail',
-                       params:{order_id:id}
+                       name: 'goods_detail',
+                       params:{id:id}
                 });
             },
             exportData (type) {

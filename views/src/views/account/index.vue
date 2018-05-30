@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Row style="margin:20px 0">
-			<Button type='info'>添加账户</Button>
+			<Button type='info' @click='addAccount'>添加账户</Button>
 		</Row>
 		<Table :data="tableData1" :columns="tableColumns1" stripe border></Table>
 	</div>
@@ -58,7 +58,7 @@
 		                                },
 		                                on:{
 		                                	click:() =>{
-
+		                                		this.showDetail(params.row.id);
 		                                	}
 		                                }
 									},'编辑'),
@@ -82,6 +82,7 @@
 				],
 				tableData1:[
 					{
+						id:1,
 						account_name:'131111111',
 						name:'王大锤',
 						account_type:'支付宝',
@@ -89,6 +90,19 @@
 						image:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3448484253,3685836170&fm=27&gp=0.jpg',
 					}
 				]
+			}
+		},
+		methods:{
+			addAccount(){
+				this.$router.push({
+					name:'account_add'
+				})
+			},
+			showDetail(id){
+				this.$router.push({
+					name:'account_detail',
+					params:{id:id}
+				});
 			}
 		}
 	};
